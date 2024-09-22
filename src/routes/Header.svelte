@@ -51,14 +51,14 @@
 
    ul {
       list-style-type: none;
-      padding: 0;
+      padding: 10px;
       overflow: hidden;
       display: flex;
       flex-direction: row;
       justify-content: center;
       min-height: 3rem;
       align-items: center;
-      margin-top: 0;
+      margin: 0;
 
       a {
          color: var(--primary);
