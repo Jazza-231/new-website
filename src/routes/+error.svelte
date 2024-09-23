@@ -1,9 +1,24 @@
+<script>
+   import { page } from "$app/stores";
+
+   console.log($page.error?.message);
+</script>
+
 <div class="center">
-   <h1>Error 404: 404 page not found. Please try again later.</h1>
-   <h3>
-      And while you're at it...try to find error page 403 and 405, I lost those
-      too
-   </h3>
+   {#if $page.error?.message === "Not Found"}
+      <h1>Error 404: 404 page not found. Please try again later.</h1>
+      <h3>
+         And while you're at it...try to find error page 403 and 405, I lost
+         those too
+      </h3>
+   {:else}
+      <h1>{$page.error?.message}</h1>
+      <h3>
+         There was initially a joke about not finding the 404 page but I
+         realised this could also be a different error sooo.... you get this
+         instead
+      </h3>
+   {/if}
    <h4>Take me <a href="/">Home</a></h4>
 </div>
 
