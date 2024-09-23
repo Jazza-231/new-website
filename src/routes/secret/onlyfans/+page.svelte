@@ -6,7 +6,6 @@
 <style lang="scss">
    .center {
       text-align: center;
-      margin-top: 20vh;
 
       h3 {
          color: var(--primary);
