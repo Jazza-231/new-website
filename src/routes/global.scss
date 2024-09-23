@@ -14,7 +14,9 @@ body {
 
 .main {
    max-width: 60rem;
+   min-width: 50rem;
    margin: auto;
+   margin-top: 5rem;
 }
 
 .colour-effect {
@@ -43,10 +45,18 @@ h6 {
    color: var(--primary);
 }
 
+p {
+   line-height: 1.5rem;
+}
+
 .primary {
    color: var(--primary);
 }
 
 .secondary {
    color: var(--secondary);
+}
+
+a {
+   color: var(--primary);
 }
