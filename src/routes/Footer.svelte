@@ -1,4 +1,6 @@
 <script lang="ts">
+   import { page } from "$app/stores";
+
    const icons = [
       {
          name: "svelte",
@@ -72,7 +74,14 @@
 
 <nav class="footer">
    <div class="container">
-      <div class="copy">&copy; 2024 Made with ❤️❤️ by Jazza</div>
+      <div class="copy">
+         {#if $page.error}
+            &copy; 2024 Made with immense pain by Jazza
+         {:else}
+            &copy; 2024 Made with ❤️❤️ by Jazza
+         {/if}
+      </div>
+
       <div class="icons">
          {#each icons as icon}
             <div class={icon.name}>
