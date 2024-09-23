@@ -1,7 +1,5 @@
 <script>
    import { page } from "$app/stores";
-
-   console.log($page.error?.message);
 </script>
 
 <div class="center">
