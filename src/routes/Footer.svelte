@@ -104,36 +104,44 @@
 </nav>
 
 <style lang="scss">
-   .container {
+   .footer {
       display: flex;
       justify-content: center;
-      flex-direction: column;
-      align-items: center;
-      margin-top: auto;
-
-      > div {
-         padding: 0.3rem;
-
-         &:last-child {
-            margin-bottom: 1rem;
-         }
-      }
-
-      .icons {
+      .container {
          display: flex;
-         gap: 0.7rem;
+         justify-content: center;
+         flex-direction: column;
+         align-items: center;
+         margin-top: auto;
+         width: fit-content;
+         padding: 1rem 1rem 0 1rem;
+         background-color: var(--background-100);
+         border-radius: 1rem 1rem 0 0;
 
-         div {
-            cursor: pointer;
+         > div {
+            padding: 0.3rem;
 
-            a,
-            & {
-               color: var(--text);
-               transition: color 200ms;
-               text-decoration: none;
+            &:last-child {
+               margin-bottom: 1rem;
+            }
+         }
 
-               &:hover {
-                  color: var(--text-800);
+         .icons {
+            display: flex;
+            gap: 0.7rem;
+
+            div {
+               cursor: pointer;
+
+               a,
+               & {
+                  color: var(--text);
+                  transition: color 200ms;
+                  text-decoration: none;
+
+                  &:hover {
+                     color: var(--text-800);
+                  }
                }
             }
          }

@@ -41,20 +41,20 @@
       justify-content: center;
 
       .hi {
-         font-size: 3rem;
+         font-size: 4rem;
       }
    }
 
    .glow {
       background: linear-gradient(45deg, var(--primary), var(--secondary));
-      width: 20rem;
-      height: 5rem;
+      width: 23rem;
+      height: 3rem;
       filter: blur(3rem);
       position: absolute;
       left: 50%;
       top: 11rem;
       transform: translate(-50%, -50%);
       z-index: -1;
-      opacity: 0.5;
+      opacity: 0.9;
    }
 </style>
