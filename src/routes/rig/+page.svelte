@@ -1,15 +1,23 @@
 <script lang="ts">
    import Laptop from "../Laptop.svelte";
+   import NewLaptop from "$lib/NewLaptop.svelte";
 </script>
 
 <div class="title">
    <h1>My Rig</h1>
 </div>
 
-<Laptop></Laptop>
+<div class="laptop">
+   <!-- <Laptop/> -->
+   <NewLaptop />
+</div>
 
 <style lang="scss">
    .title {
       text-align: center;
+   }
+
+   .laptop {
+      height: 600px;
    }
 </style>
