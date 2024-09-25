@@ -21,7 +21,7 @@
    zoom={3}
 />
 
-<T.DirectionalLight position={[-4, 15, 10]} intensity={2} castShadow />
+<T.DirectionalLight position={[-3, 30, 10]} intensity={2} castShadow />
 
 <T.AmbientLight intensity={3} />
 
