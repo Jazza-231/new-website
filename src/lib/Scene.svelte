@@ -7,8 +7,6 @@
       rotation += delta;
    });
 
-   console.log(useThrelte().scene);
-
    let tempFix = $state(false);
 </script>
 
@@ -56,10 +54,6 @@
                   font="/fonts/Inter Medium_Regular.json"
                   oncreate={() => {
                      align();
-
-                     useThrelte().scene.traverse((obj) => {
-                        console.log(obj.position);
-                     });
                   }}
                />
                <T.MeshStandardMaterial />
