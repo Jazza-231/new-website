@@ -17,9 +17,9 @@
    zoom={4.5}
 />
 
-<T.DirectionalLight position={[10, 10, 15]} intensity={2} castShadow />
+<T.DirectionalLight position={[-5, 10, 10]} intensity={2} castShadow />
 
-<T.AmbientLight intensity={4} />
+<T.AmbientLight intensity={3} />
 
 {#await useGltf("/Laptop modelling attempt.glb") then gltf}
    <!-- Traverse the gltf.scene to apply shadows to all meshes -->
@@ -38,5 +38,5 @@
 
 <T.Mesh rotation.x={-Math.PI / 2} receiveShadow position.y={0.5}>
    <T.CircleGeometry args={[7, 100]} />
-   <T.ShadowMaterial opacity={0.5} />
+   <T.ShadowMaterial opacity={0.3} />
 </T.Mesh>
