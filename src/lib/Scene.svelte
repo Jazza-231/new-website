@@ -1,27 +1,31 @@
 <script lang="ts">
-   import { T, useTask } from "@threlte/core";
-   import { useGltf } from "@threlte/extras";
+   import { T, useTask, useThrelte } from "@threlte/core";
+   import { useGltf, Text3DGeometry, Align } from "@threlte/extras";
 
-   let rotation = 0;
+   let rotation = $state(Math.PI / 2);
    useTask((delta) => {
       rotation += delta;
    });
+
+   console.log(useThrelte().scene);
+
+   let tempFix = $state(false);
 </script>
 
 <T.PerspectiveCamera
    makeDefault
-   position={[10, 10, 10]}
+   position={[10, 10, 0]}
    oncreate={(ref) => {
       ref.lookAt(0, 1, 0);
    }}
-   zoom={4.5}
+   zoom={3}
 />
 
-<T.DirectionalLight position={[-5, 10, 10]} intensity={2} castShadow />
+<T.DirectionalLight position={[-4, 15, 10]} intensity={2} castShadow />
 
 <T.AmbientLight intensity={3} />
 
-{#await useGltf("/Laptop modelling attempt.glb") then gltf}
+{#await useGltf("/models/Laptop modelling attempt.glb") then gltf}
    <!-- Traverse the gltf.scene to apply shadows to all meshes -->
    {#key gltf.scene}
       {gltf.scene.traverse((object) => {
@@ -30,7 +34,6 @@
             object.castShadow = true;
             object.receiveShadow = true;
          }
-         console.log(gltf.materials);
       })}
       <T is={gltf.scene} position.y={1.5} rotation.y={rotation} scale={7} />
    {/key}
@@ -40,3 +43,28 @@
    <T.CircleGeometry args={[7, 100]} />
    <T.ShadowMaterial opacity={0.3} />
 </T.Mesh>
+
+<T.Group rotation.y={rotation}>
+   <T.Group position={[0, 2.3, -0.55]}>
+      <Align>
+         {#snippet children({ align })}
+            <T.Mesh castShadow>
+               <Text3DGeometry
+                  text={"Lenovo Legion Pro 7i Gen 8"}
+                  size={0.1}
+                  depth={0.02}
+                  font="/fonts/Inter Medium_Regular.json"
+                  oncreate={() => {
+                     align();
+
+                     useThrelte().scene.traverse((obj) => {
+                        console.log(obj.position);
+                     });
+                  }}
+               />
+               <T.MeshStandardMaterial />
+            </T.Mesh>
+         {/snippet}
+      </Align>
+   </T.Group>
+</T.Group>

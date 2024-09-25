@@ -18,6 +18,8 @@
    }
 
    .laptop {
-      height: 600px;
+      height: 1000px;
+      z-index: -1;
+      position: relative;
    }
 </style>
