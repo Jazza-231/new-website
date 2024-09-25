@@ -21,7 +21,7 @@
 
 <T.DirectionalLight position={[-3, 30, 10]} intensity={2} castShadow />
 
-<T.AmbientLight intensity={3} />
+<T.AmbientLight intensity={1} />
 
 {#await useGltf("/models/Laptop modelling attempt.glb") then gltf}
    <!-- Traverse the gltf.scene to apply shadows to all meshes -->

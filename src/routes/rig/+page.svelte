@@ -1,5 +1,4 @@
 <script lang="ts">
-   import Laptop from "../Laptop.svelte";
    import NewLaptop from "$lib/NewLaptop.svelte";
 </script>
 
@@ -8,7 +7,6 @@
 </div>
 
 <div class="laptop">
-   <!-- <Laptop/> -->
    <NewLaptop />
 </div>
 
