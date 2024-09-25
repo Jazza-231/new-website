@@ -39,6 +39,7 @@
    .greeting {
       display: flex;
       justify-content: center;
+      margin-top: 2rem;
 
       .hi {
          font-size: 4rem;
