@@ -4,10 +4,8 @@
 
    let rotation = $state(Math.PI / 2);
    useTask((delta) => {
-      rotation += delta;
+      rotation += delta / 2;
    });
-
-   let tempFix = $state(false);
 </script>
 
 <T.PerspectiveCamera
@@ -19,7 +17,7 @@
    zoom={3}
 />
 
-<T.DirectionalLight position={[-3, 30, 10]} intensity={2} castShadow />
+<T.DirectionalLight position={[-5, 20, 3]} intensity={2} castShadow />
 
 <T.AmbientLight intensity={1} />
 
@@ -42,23 +40,56 @@
    <T.ShadowMaterial opacity={0.3} />
 </T.Mesh>
 
-<T.Group rotation.y={rotation}>
-   <T.Group position={[0, 2.3, -0.55]}>
-      <Align>
-         {#snippet children({ align })}
-            <T.Mesh castShadow>
-               <Text3DGeometry
-                  text={"Lenovo Legion Pro 7i Gen 8"}
-                  size={0.1}
-                  depth={0.02}
-                  font="/fonts/Inter Medium_Regular.json"
-                  oncreate={() => {
-                     align();
-                  }}
-               />
-               <T.MeshStandardMaterial />
-            </T.Mesh>
-         {/snippet}
-      </Align>
+{#snippet RotatingText(
+   origin: [x: number, y: number, z: number],
+   position: [x: number, y: number, z: number],
+   text: string,
+   rotation: [x: number, y: number, z: number] = [0, 0, 0],
+)}
+   <T.Group rotation={origin}>
+      <T.Group {position}>
+         <Align>
+            {#snippet children({ align })}
+               <T.Mesh castShadow {rotation}>
+                  <Text3DGeometry
+                     {text}
+                     size={0.1}
+                     depth={0.02}
+                     font="/fonts/Inter Medium_Regular.json"
+                     oncreate={() => {
+                        align();
+                     }}
+                  />
+               </T.Mesh>
+            {/snippet}
+         </Align>
+      </T.Group>
    </T.Group>
-</T.Group>
+{/snippet}
+
+{@render RotatingText(
+   [0, rotation, 0],
+   [0, 2.3, -0.5],
+   "Lenovo Legion Pro 7i Gen 8",
+)}
+
+{@render RotatingText(
+   [0, rotation, 0],
+   [1, 1.7, -0.31],
+   "240hz, 2560x1600",
+   [-0.2, 0, 0],
+)}
+
+{@render RotatingText(
+   [0, rotation, 0],
+   [-0.4, 0.75, 1],
+   "2x4TB SSD, 32GB RAM",
+   [-Math.PI / 2, 0, 0],
+)}
+
+{@render RotatingText(
+   [0, rotation, 0],
+   [0.2, 0.9, -0.2],
+   "RTX 4070, i9-13900hx",
+   [0.5, Math.PI, 0],
+)}
