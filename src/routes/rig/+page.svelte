@@ -3,7 +3,7 @@
 </script>
 
 <div class="title">
-   <h1>My Rig</h1>
+   <h1 class="rig">My Rig</h1>
 </div>
 
 <div class="loading">
@@ -30,9 +30,16 @@
       transition: opacity 500ms;
       display: flex;
       justify-content: center;
-      padding-top: 1rem;
       position: relative;
       z-index: -1;
+   }
+
+   .loading {
+      padding-top: 2.5rem;
+   }
+
+   .rig {
+      margin: 0;
    }
 
    .laptop {
