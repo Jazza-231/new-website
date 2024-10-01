@@ -2,12 +2,15 @@
    import { T, useTask, useThrelte } from "@threlte/core";
    import { useGltf, Text3DGeometry, Align } from "@threlte/extras";
 
+   // svelte-ignore non_reactive_update
+   let rotate = false;
    let rotation = $state(Math.PI / 2);
    useTask((delta) => {
-      rotation += delta / 2;
+      if (rotate) rotation += delta / 2;
    });
 
    const laptopEl = document.querySelector(".laptop");
+   const loadingEl = document.querySelector(".loading");
 </script>
 
 <T.PerspectiveCamera
@@ -26,6 +29,8 @@
 {#await useGltf("/models/Laptop modelling attempt.glb") then gltf}
    <!-- Traverse the gltf.scene to apply shadows to all meshes -->
    {laptopEl?.classList.add("done")}
+   {loadingEl?.classList.add("done")}
+   {(rotate = true)}
    {#key gltf.scene}
       {gltf.scene.traverse((object) => {
          //@ts-ignore
