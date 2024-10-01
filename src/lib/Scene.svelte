@@ -6,6 +6,8 @@
    useTask((delta) => {
       rotation += delta / 2;
    });
+
+   const laptopEl = document.querySelector(".laptop");
 </script>
 
 <T.PerspectiveCamera
@@ -23,6 +25,7 @@
 
 {#await useGltf("/models/Laptop modelling attempt.glb") then gltf}
    <!-- Traverse the gltf.scene to apply shadows to all meshes -->
+   {laptopEl?.classList.add("done")}
    {#key gltf.scene}
       {gltf.scene.traverse((object) => {
          //@ts-ignore

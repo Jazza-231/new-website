@@ -16,6 +16,31 @@ body {
    min-height: 100vh;
    display: flex;
    flex-direction: column;
+
+   &::-webkit-scrollbar {
+      width: 0.5rem;
+      background: var(--background-100);
+   }
+
+   &::-webkit-scrollbar-track {
+      background: var(--background-100);
+      border-radius: 0.5rem;
+      margin: 0.5rem;
+      padding: 0.5rem;
+      width: 0.5rem;
+   }
+
+   &::-webkit-scrollbar-thumb {
+      background: var(--primary);
+      border-radius: 0.5rem;
+      margin: 0.5rem;
+      padding: 0.5rem;
+      width: 0.5rem;
+   }
+
+   &::-webkit-scrollbar-button {
+      display: none;
+   }
 }
 
 .main {

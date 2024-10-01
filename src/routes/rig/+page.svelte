@@ -19,5 +19,11 @@
       height: 1000px;
       z-index: -1;
       position: relative;
+      opacity: 0;
+      transition: opacity 1000ms;
+   }
+
+   :global(.laptop.done) {
+      opacity: 1;
    }
 </style>
