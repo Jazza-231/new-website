@@ -47,6 +47,7 @@
       backdrop-filter: blur(1rem);
       background: linear-gradient(180deg, black, transparent);
       border-bottom: 1px solid var(--background-100);
+      z-index: 100;
    }
 
    ul {
