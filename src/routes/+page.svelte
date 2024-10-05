@@ -35,7 +35,7 @@
          Forza Horizon 5, and Cyberpunk 2077. You can check out screenshots <a
             href="/screenshots">here</a
          >
-         > and my rig <a href="/rig">here.</a>
+         and my rig <a href="/rig">here.</a>
       </p>
    </div>
 
@@ -44,7 +44,7 @@
       <div class="bentos">
          <Bento
             header="Scratch Addons"
-            imagePath="Scratch Addons.png"
+            imagePath="ScratchAddons.png"
             content="A collection of addons for the kids' coding website; Scratch."
             href="/projects/scratch-addons"
             area="a"
@@ -59,7 +59,7 @@
          />
          <Bento
             header="Jazza's Website"
-            imagePath="Jazza's Website.png"
+            imagePath="Website.png"
             content="A website I made for myself, to showcase my projects and stuff."
             href="/projects/jazzas-website"
             short
@@ -67,7 +67,7 @@
          />
          <Bento
             header="Quickie"
-            imagePath="Lorem Picsum.jpg"
+            imagePath="LoremPicsum.jpg"
             content="When you don't have much time, these code lessons are for you."
             href="/projects/quickie"
             area="d"
