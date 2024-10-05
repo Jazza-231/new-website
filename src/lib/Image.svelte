@@ -4,7 +4,7 @@
    const props = $props();
    const { header, imagePath } = props;
 
-   let loaded: () => void;
+   let loaded: () => void = $state(() => {});
    let srcLoader: any;
    let image: any;
 
@@ -31,7 +31,7 @@
    bind:this={srcLoader}
 />
 
-<style lang="scss">
+<style>
    img {
       opacity: 1;
       transition: blur 500ms;

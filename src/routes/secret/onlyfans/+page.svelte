@@ -3,7 +3,7 @@
    <h3>Save my eyes and take me back <a href="/">Home</a></h3>
 </div>
 
-<style lang="scss">
+<style>
    .center {
       text-align: center;
 

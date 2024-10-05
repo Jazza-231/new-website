@@ -22,7 +22,7 @@
    </a>
 </div>
 
-<style lang="scss">
+<style>
    .bento {
       display: flex;
       flex-direction: column;
@@ -72,7 +72,7 @@
          box-shadow: 0 0 0.5rem var(--primary);
          transition: all 0.2s ease-in-out;
 
-         &:hover {
+         :global(&:hover) {
             transform: scale(1.05);
          }
       }

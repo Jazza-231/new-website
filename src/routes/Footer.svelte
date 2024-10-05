@@ -103,7 +103,7 @@
    </div>
 </nav>
 
-<style lang="scss">
+<style>
    .footer {
       display: flex;
       justify-content: center;
@@ -119,7 +119,7 @@
          border-radius: 1rem 1rem 0 0;
          box-shadow: rgba(0, 0, 0, 0.7) 0 0 10rem;
 
-         > div {
+         & > div {
             padding: 0.3rem;
 
             &:last-child {

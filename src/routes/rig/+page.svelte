@@ -22,7 +22,7 @@
    <NewLaptop />
 </div>
 
-<style lang="scss">
+<style>
    .title,
    .loading {
       text-align: center;

@@ -76,7 +76,7 @@
    </div>
 </div>
 
-<style lang="scss">
+<style>
    .home {
       display: flex;
       flex-direction: column;

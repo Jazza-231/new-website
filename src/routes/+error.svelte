@@ -20,7 +20,7 @@
    <h4>Take me <a href="/">Home</a></h4>
 </div>
 
-<style lang="scss">
+<style>
    .center {
       text-align: center;
 
