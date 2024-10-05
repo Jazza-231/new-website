@@ -42,6 +42,16 @@
          link: "https://devicon.dev/",
          icon: "devicon-devicon-plain",
       },
+      {
+         name: "three",
+         link: "https://threejs.org/",
+         icon: "devicon-threejs-original",
+      },
+      {
+         name: "blender",
+         link: "https://www.blender.org/",
+         icon: "devicon-blender-original",
+      },
    ];
 
    function toTitleCase(str: string) {
