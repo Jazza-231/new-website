@@ -23,11 +23,6 @@
          icon: "devicon-vscode-plain",
       },
       {
-         name: "sass",
-         link: "https://sass-lang.com/",
-         icon: "devicon-sass-original",
-      },
-      {
          name: "typescript",
          link: "https://www.typescriptlang.org/",
          icon: "devicon-typescript-plain",

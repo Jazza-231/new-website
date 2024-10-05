@@ -24,7 +24,7 @@
       <p>
          My relationship with programming is one of immense love-filled hatred.
          <br />
-         Looking at you CSS. (SASS makes it bearable.)
+         Looking at you CSS.
       </p>
       <p>
          I currently attend a TAFE institution in Western Australia for a music

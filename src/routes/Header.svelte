@@ -39,7 +39,7 @@
    </ul>
 </nav>
 
-<style lang="scss">
+<style>
    nav {
       position: sticky;
       top: 0;

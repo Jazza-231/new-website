@@ -5,7 +5,7 @@
    <h5>Country roadsssss</h5>
 </div>
 
-<style lang="scss">
+<style>
    .center {
       text-align: center;
 
