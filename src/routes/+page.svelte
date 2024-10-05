@@ -35,7 +35,7 @@
          Forza Horizon 5, and Cyberpunk 2077. You can check out screenshots <a
             href="/screenshots">here</a
          >
-         and my rig <a href="/rig">here.</a>
+         > and my rig <a href="/rig">here.</a>
       </p>
    </div>
 
@@ -54,6 +54,19 @@
             content="A movie explorer and player designed to just be...better"
             href="/projects/mediascout"
             short
+         />
+         <Bento
+            header="Jazza's Website"
+            imagePath="Jazza's Website.png"
+            content="A website I made for myself, to showcase my projects and stuff."
+            href="/projects/jazzas-website"
+            short
+         />
+         <Bento
+            header="Quickie"
+            imagePath="Lorem Picsum.jpg"
+            content="When you don't have much time, these code lessons are for you."
+            href="/projects/quickie"
          />
       </div>
    </div>
@@ -77,8 +90,14 @@
    }
 
    .bentos {
-      display: flex;
-      flex-direction: row;
+      display: grid;
+      grid-template-columns: auto auto auto;
+      gap: 1rem;
+      width: 100%;
+      box-sizing: border-box;
+      margin-bottom: 3rem;
+      margin-top: 2rem;
+      grid-row: span 3 / span 3;
    }
 
    .glow {

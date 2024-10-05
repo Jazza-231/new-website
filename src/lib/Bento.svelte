@@ -23,10 +23,9 @@
       padding: 2rem;
       border-radius: 0.5rem;
       backdrop-filter: blur(0.1rem);
-      gap: 2rem;
+      gap: 1rem;
       border: var(--secondary-400) solid 0.2rem;
       box-shadow: var(--secondary-200) 0 0 7rem;
-      margin: 2rem 3rem 4rem 0;
 
       .text {
          display: flex;
@@ -52,6 +51,12 @@
          }
       }
 
+      a:has(img) {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+      }
+
       img {
          width: auto;
          height: 100%;
@@ -65,16 +70,17 @@
       }
 
       &.short img {
-         width: 100%;
+         max-height: 10rem;
          height: auto;
          position: relative;
       }
 
-      width: 40rem;
+      width: auto;
       height: 20rem;
+      grid-column: span 2 / span 2;
 
       &.short {
-         width: 20rem;
+         grid-column: span 1 / span 1;
       }
 
       &:not(.short) {
