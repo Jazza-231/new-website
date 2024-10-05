@@ -47,6 +47,7 @@
             imagePath="Scratch Addons.png"
             content="A collection of addons for the kids' coding website; Scratch."
             href="/projects/scratch-addons"
+            area="a"
          />
          <Bento
             header="MediaScout"
@@ -54,6 +55,7 @@
             content="A movie explorer and player designed to just be...better"
             href="/projects/mediascout"
             short
+            area="b"
          />
          <Bento
             header="Jazza's Website"
@@ -61,12 +63,14 @@
             content="A website I made for myself, to showcase my projects and stuff."
             href="/projects/jazzas-website"
             short
+            area="c"
          />
          <Bento
             header="Quickie"
             imagePath="Lorem Picsum.jpg"
             content="When you don't have much time, these code lessons are for you."
             href="/projects/quickie"
+            area="d"
          />
       </div>
    </div>
@@ -91,13 +95,15 @@
 
    .bentos {
       display: grid;
-      grid-template-columns: auto auto auto;
+      grid-template-columns: repeat(3, 1fr);
       gap: 1rem;
       width: 100%;
       box-sizing: border-box;
       margin-bottom: 3rem;
       margin-top: 2rem;
-      grid-row: span 3 / span 3;
+      grid-template-areas:
+         "a a b"
+         "c d d";
    }
 
    .glow {

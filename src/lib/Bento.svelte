@@ -1,12 +1,16 @@
 <script lang="ts">
    const props = $props();
    console.log(props);
-   const { header, imagePath, short, content, href } = props;
+   const { header, imagePath, short, content, href, area } = props;
 
    const bentoClass = header.toLowerCase().replaceAll(" ", "-");
 </script>
 
-<div class={`bento bento-${bentoClass}`} class:short>
+<div
+   class={`bento bento-${bentoClass}`}
+   class:short
+   style={`grid-area: ${area};`}
+>
    <div class="text">
       <h3 class="header"><a {href}>{header}</a></h3>
       <p>{content}</p>
@@ -77,11 +81,6 @@
 
       width: auto;
       height: 20rem;
-      grid-column: span 2 / span 2;
-
-      &.short {
-         grid-column: span 1 / span 1;
-      }
 
       &:not(.short) {
          flex-direction: row;
