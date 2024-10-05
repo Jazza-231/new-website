@@ -1,6 +1,6 @@
 <script lang="ts">
+   import Image from "./Image.svelte";
    const props = $props();
-   console.log(props);
    const { header, imagePath, short, content, href, area } = props;
 
    const bentoClass = header.toLowerCase().replaceAll(" ", "-");
@@ -16,7 +16,9 @@
       <p>{content}</p>
    </div>
    <a {href} aria-label="Link to {header} project page.">
-      <img src="/images/{imagePath}" alt="Image for {header}" />
+      <!-- <img src="/low-res-images/{imagePath}" alt="Image for {header}" /> -->
+      <!-- <img src="/images/{imagePath}" alt="Image for {header}" /> -->
+      <Image {header} {imagePath} />
    </a>
 </div>
 
@@ -59,11 +61,13 @@
          display: flex;
          align-items: center;
          justify-content: center;
+         width: 15rem;
       }
 
-      img {
-         width: auto;
-         height: 100%;
+      :global(img) {
+         width: 100%;
+         height: auto;
+         object-fit: contain;
          border-radius: 0.5rem;
          box-shadow: 0 0 0.5rem var(--primary);
          transition: all 0.2s ease-in-out;
@@ -73,7 +77,7 @@
          }
       }
 
-      &.short img {
+      &:global(.short img) {
          max-height: 10rem;
          height: auto;
          position: relative;
