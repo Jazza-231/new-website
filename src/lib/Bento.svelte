@@ -1,7 +1,7 @@
 <script lang="ts">
    import Image from "./Image.svelte";
    const props = $props();
-   const { header, imagePath, short, content, href, area } = props;
+   const { header, imagePath, short, content, href, area, children } = props;
 
    const bentoClass = header.toLowerCase().replaceAll(" ", "-");
 </script>
@@ -14,10 +14,14 @@
    <div class="text">
       <h3 class="header"><a {href}>{header}</a></h3>
       <p>{content}</p>
+      {#if children}
+         <div class="children">
+            {@render children()}
+         </div>
+      {/if}
    </div>
+
    <a {href} aria-label="Link to {header} project page.">
-      <!-- <img src="/low-res-images/{imagePath}" alt="Image for {header}" /> -->
-      <!-- <img src="/images/{imagePath}" alt="Image for {header}" /> -->
       <Image {header} {imagePath} />
    </a>
 </div>

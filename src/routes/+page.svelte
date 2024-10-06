@@ -56,7 +56,9 @@
             href="/projects/mediascout"
             short
             area="b"
-         />
+         >
+            <p>Currently private.</p>
+         </Bento>
          <Bento
             header="Jazza's Website"
             imagePath="Website.png"
@@ -71,7 +73,9 @@
             content="When you don't have much time, these code lessons are for you."
             href="/projects/quickie"
             area="d"
-         />
+         >
+            <p>Currently private.</p>
+         </Bento>
       </div>
    </div>
 </div>
