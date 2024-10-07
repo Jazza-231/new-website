@@ -18,13 +18,13 @@
 </script>
 
 <img
-   src="/src/lib/assets/images/{imagePath}"
+   src="/low-res-images/{imagePath}"
    alt="Image for {header}"
    class="blur"
    bind:this={image}
 />
 <img
-   src="/src/lib/assets/images/{imagePath}"
+   src="/images/{imagePath}"
    alt="Image for {header}"
    class="hidden"
    onload={loaded}
