@@ -5,8 +5,8 @@
    const { header, imagePath } = props;
 
    let loaded: () => void = $state(() => {});
-   let srcLoader: any;
-   let image: any;
+   let srcLoader: HTMLImageElement;
+   let image: HTMLImageElement;
 
    if (browser) {
       loaded = () => {
