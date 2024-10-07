@@ -2,8 +2,8 @@ import sharp from "sharp";
 import fs from "fs";
 import path from "path";
 
-const inputDir = path.resolve("static/images");
-const outputDir = path.resolve("static/low-res-images");
+const inputDir = path.resolve("src/lib/assets/images");
+const outputDir = path.resolve("src/lib/assets/low-res-images");
 
 export const imagePreprocessor = async () => {
    if (!fs.existsSync(outputDir)) {
