@@ -5,24 +5,20 @@
    const { header, imagePath } = props;
 
    let loaded: () => void = $state(() => {});
-   let srcLoader: HTMLImageElement;
-   let image: HTMLImageElement;
+   let srcLoader: any;
+   let image: any;
 
    if (browser) {
       loaded = () => {
-         setTimeout(() => {
-            image.src = srcLoader.src;
-            image.width = srcLoader.width;
-            image.height = srcLoader.height;
-            image.classList.remove("blur");
-            srcLoader.remove();
-         }, 200);
+         image.src = srcLoader.src;
+         image.classList.remove("blur");
+         srcLoader.remove();
       };
    }
 </script>
 
 <img
-   src="/src/lib/assets/images/low-res/{imagePath}"
+   src="/src/lib/assets/images/{imagePath}"
    alt="Image for {header}"
    class="blur"
    bind:this={image}
