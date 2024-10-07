@@ -3,7 +3,7 @@ import fs from "fs";
 import path from "path";
 
 const inputDir = path.resolve("src/lib/assets/images");
-const outputDir = path.resolve("src/lib/assets/low-res-images");
+const outputDir = path.resolve("src/lib/assets/images/low-res");
 
 export const imagePreprocessor = async () => {
    if (!fs.existsSync(outputDir)) {

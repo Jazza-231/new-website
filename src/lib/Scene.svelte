@@ -31,7 +31,7 @@
 
 <T.AmbientLight intensity={1} />
 
-{#await useGltf("/models/Laptop modelling attempt.glb") then gltf}
+{#await useGltf("/src/lib/assets/models/Laptop modelling attempt.glb") then gltf}
    <!-- Traverse the gltf.scene to apply shadows to all meshes -->
    {laptopEl?.classList.add("done")}
    {loadingEl?.classList.add("done")}
@@ -68,7 +68,7 @@
                      {text}
                      size={0.1}
                      depth={0.02}
-                     font="/fonts/Inter Medium_Regular.json"
+                     font="/src/lib/assets/fonts/Inter Medium_Regular.json"
                      oncreate={() => {
                         align();
                      }}
