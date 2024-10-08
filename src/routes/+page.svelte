@@ -111,6 +111,7 @@
             {@render indented([
                "I play a lot of games, but I also do not play a lot of games",
                "I have about $300 worth of games installed that I haven't played :(",
+               "And probably that much on my wishlist too"
             ])}
             <li>F O O D</li>
             {@render indented([
