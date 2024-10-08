@@ -2,6 +2,8 @@
    import Bento from "$lib/Bento.svelte";
    const { data } = $props();
    const { age } = data;
+
+   import Arrow from "$lib/MaterialSymbolsKeyboardDoubleArrowRightRounded.svelte";
 </script>
 
 <div class="home">
@@ -78,6 +80,55 @@
          </Bento>
       </div>
    </div>
+
+   {#snippet indented(texts: string[])}
+      {#each texts as text}
+         <li class="indented">
+            <div class="icon"><Arrow /></div>
+            {text}
+         </li>
+      {/each}
+      <br />
+   {/snippet}
+
+   <div class="about">
+      <div class="more">
+         <h2>More about me!</h2>
+         <ul class="list">
+            <li>I love programming, despite not being very good at it.</li>
+            {@render indented([
+               "I am currently learning svelte (and by extension sveltekit)",
+               "I started learning programming at about 17 to contribute to the Scratch Addons project",
+            ])}
+            <li>I LIVE for music.</li>
+            {@render indented([
+               "I go to TAFE (It's like college) for music sound production",
+               "Instead of performing, we do the technical side, which in my opinion is a lot more fun",
+               "I also of course love listening to music (I am right now)",
+               "Some of my favourite artists include Eminem, AJR, Imagine Dragons, and Train",
+            ])}
+            <li>I also love to play games.</li>
+            {@render indented([
+               "I play a lot of games, but I also do not play a lot of games",
+               "I have about $300 worth of games installed that I haven't played :(",
+            ])}
+            <li>F O O D</li>
+            {@render indented([
+               "I LOVE food. Almost everything to be honest, you'll find me munching on a carrot randomly",
+               "My absolute favourite food is Spaghetti Bolognese, with a special spice mix of my own creation",
+               "My favourite pasta to go with it is Barilla Linguinie N.13",
+               "Also recently I've found a love for salmon, and I've gotten quite good at cooking it",
+            ])}
+            <li>Other things I like!</li>
+            {@render indented([
+               "Photography",
+               "Friends",
+               "Movies (Classics like Inception to new hits like Deadpool And Wolverine)",
+               "Reading (I LOVE YOU BRANDON SANDERSON)",
+            ])}
+         </ul>
+      </div>
+   </div>
 </div>
 
 <style>
@@ -94,6 +145,24 @@
 
       .hi {
          font-size: 4rem;
+      }
+   }
+
+   .list {
+      list-style: none;
+      padding: 0;
+
+      .indented {
+         padding-left: 1rem;
+         display: flex;
+         align-items: center;
+         opacity: 0.7;
+
+         .icon {
+            padding-right: 0.3rem;
+            display: flex;
+            align-items: center;
+         }
       }
    }
 
