@@ -5,7 +5,7 @@ import path from "path";
 const inputDir = path.resolve("static/images");
 const outputDir = path.resolve("static/low-res-images");
 
-export const imagePreprocessor = async () => {
+const imagePreprocessor = async () => {
    if (!fs.existsSync(outputDir)) {
       fs.mkdirSync(outputDir, { recursive: true });
    }
@@ -15,20 +15,29 @@ export const imagePreprocessor = async () => {
       return fs.statSync(fullPath).isFile();
    });
 
-   files.forEach((file) => {
+   for (const file of files) {
       if (file.endsWith(".jpg") || file.endsWith(".png")) {
          const inputFilePath = path.join(inputDir, file);
          const outputFilePath = path.join(outputDir, file);
 
-         sharp(inputFilePath)
+         await sharp(inputFilePath)
             .resize(100)
-            .toFile(outputFilePath, (err, info) => {
+            .toFile(outputFilePath, (err) => {
                if (err) {
                   console.error(`Error processing ${file}:`, err);
-               } else {
-                  console.log(`Processed ${file}:`, info);
                }
             });
       }
-   });
+   }
+   console.log("Image preprocessing complete.");
 };
+
+// Vite plugin
+export default function imageProcessingPlugin() {
+   return {
+      name: "vite-image-processing-plugin",
+      buildStart() {
+         imagePreprocessor();
+      },
+   };
+}
