@@ -6,28 +6,25 @@
    const bentoClass = header.toLowerCase().replaceAll(" ", "-");
 </script>
 
-<div
-   class={`bento bento-${bentoClass}`}
-   class:short
-   style={`grid-area: ${area};`}
->
-   <div class="text">
-      <h3 class="header"><a {href}>{header}</a></h3>
-      <p>{content}</p>
-      {#if children}
-         <div class="children">
-            {@render children()}
-         </div>
-      {/if}
-   </div>
-
-   <a {href} aria-label="Link to {header} project page.">
-      <Image {header} {imagePath} />
+<div class={`bento bento-${bentoClass}`} style={`grid-area: ${area};`}>
+   <a {href} aria-label="Link to {header} project page." class:short>
+      <div class="text">
+         <h3 class="header">{header}</h3>
+         <p>{content}</p>
+         {#if children}
+            <div class="children">
+               {@render children()}
+            </div>
+         {/if}
+      </div>
+      <div class="image-container">
+         <Image {header} {imagePath} />
+      </div>
    </a>
 </div>
 
 <style>
-   .bento {
+   .bento a {
       display: flex;
       flex-direction: column;
       padding: 2rem;
@@ -36,6 +33,7 @@
       gap: 1rem;
       border: var(--secondary-400) solid 0.2rem;
       box-shadow: var(--secondary-200) 0 0 7rem;
+      text-decoration: none;
 
       .text {
          display: flex;
@@ -46,22 +44,26 @@
          font-size: 1.5rem;
          margin-bottom: 0.5rem;
          min-height: 2rem;
+         color: var(--primary);
+         transition:
+            color 200ms,
+            transform 200ms;
+         width: fit-content;
+         transform-origin: left;
+         text-decoration: underline;
 
-         a {
-            color: var(--primary);
-            transition:
-               color 200ms,
-               font-size 200ms;
-            font-size: 1.5rem;
-
-            &:hover {
-               color: var(--text-800);
-               font-size: 1.6rem;
-            }
+         &:hover {
+            color: var(--text-800);
+            transform: scale(1.1);
          }
       }
 
-      a:has(img) {
+      .text :not(:first-child) {
+         color: var(--text);
+         text-decoration: none;
+      }
+
+      .image-container:has(img) {
          display: flex;
          align-items: center;
          justify-content: center;
@@ -76,7 +78,7 @@
          box-shadow: 0 0 0.5rem var(--primary);
          transition: all 0.2s ease-in-out;
 
-         :global(&:hover) {
+         &:hover {
             transform: scale(1.05);
          }
       }
