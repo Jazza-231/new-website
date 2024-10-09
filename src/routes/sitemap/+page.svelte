@@ -1,6 +1,6 @@
 <script lang="ts">
    import type { Component } from "svelte";
-   import { Home, Folder, Link, Post, Image } from "$lib/Icons";
+   import { Home, Folder, Link, Post, Image, Three } from "$lib/Icons";
 </script>
 
 {#snippet sitemap(text: string, icon: Component, href: string)}
@@ -20,6 +20,7 @@
    {@render sitemap("Links", Link, "/links")}
    {@render sitemap("Posts", Post, "/posts")}
    {@render sitemap("Screenshots", Image, "/screenshots")}
+   {@render sitemap("My Rig", Three, "/rig")}
 </div>
 
 <style>

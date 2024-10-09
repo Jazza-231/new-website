@@ -6,6 +6,8 @@
    import { Arrow } from "$lib/Icons";
 </script>
 
+<!-- PLEASE DO REACTIVITY SOMETIME https://www.youtube.com/watch?v=x4u1yp3Msao -->
+
 <div class="home">
    <div class="greeting">
       <div class="glow"></div>
