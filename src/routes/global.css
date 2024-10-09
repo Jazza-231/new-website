@@ -89,11 +89,14 @@ a {
 
 button {
    background: var(--primary-300);
+   color: var(--text);
    border: none;
-   padding: 0.1rem 1rem;
+   padding: 0.7rem 1.2rem;
    border-radius: 0.5rem;
    cursor: pointer;
    transition: all 0.2s ease-in-out;
+   font-size: larger;
+
 
    &:hover {
       background: var(--primary-400);

@@ -3,8 +3,7 @@
    const { data } = $props();
    const { age } = data;
 
-   import Arrow from "$lib/Arrow.svelte";
-   import { goto } from "$app/navigation";
+   import { Arrow } from "$lib/Icons";
 </script>
 
 <div class="home">
@@ -133,11 +132,7 @@
    </div>
 
    <div class="sitemap">
-      <a href="/sitemap">
-         <button class="sitemap-button">
-            <h3>Sitemap</h3>
-         </button>
-      </a>
+      <a href="/sitemap"> Sitemap </a>
    </div>
 </div>
 
@@ -145,10 +140,10 @@
    .sitemap {
       display: flex;
       justify-content: center;
-      margin-bottom: 1rem;
 
-      h3 {
-         color: var(--text);
+      a {
+         color: var(--text-950);
+         padding: 0.7rem 1rem;
       }
    }
    .home {
