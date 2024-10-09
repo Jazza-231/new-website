@@ -86,3 +86,20 @@ p {
 a {
    color: var(--primary);
 }
+
+button {
+   background: var(--primary-300);
+   border: none;
+   padding: 0.1rem 1rem;
+   border-radius: 0.5rem;
+   cursor: pointer;
+   transition: all 0.2s ease-in-out;
+
+   &:hover {
+      background: var(--primary-400);
+   }
+
+   &:active {
+      background: var(--secondary-400);
+   }
+}

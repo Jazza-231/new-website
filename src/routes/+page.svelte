@@ -3,7 +3,8 @@
    const { data } = $props();
    const { age } = data;
 
-   import Arrow from "$lib/MaterialSymbolsKeyboardDoubleArrowRightRounded.svelte";
+   import Arrow from "$lib/Arrow.svelte";
+   import { goto } from "$app/navigation";
 </script>
 
 <div class="home">
@@ -111,7 +112,7 @@
             {@render indented([
                "I play a lot of games, but I also do not play a lot of games",
                "I have about $300 worth of games installed that I haven't played :(",
-               "And probably that much on my wishlist too"
+               "And probably that much on my wishlist too",
             ])}
             <li>F O O D</li>
             {@render indented([
@@ -130,9 +131,26 @@
          </ul>
       </div>
    </div>
+
+   <div class="sitemap">
+      <a href="/sitemap">
+         <button class="sitemap-button">
+            <h3>Sitemap</h3>
+         </button>
+      </a>
+   </div>
 </div>
 
 <style>
+   .sitemap {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 1rem;
+
+      h3 {
+         color: var(--text);
+      }
+   }
    .home {
       display: flex;
       flex-direction: column;
