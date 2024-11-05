@@ -1,62 +1,17 @@
 {
-  "default": [],
-  "cyberpunk": [
-    {
-      "width": 2560,
-      "height": 1600,
-      "game": "cyberpunk",
-      "path": "cyberpunk\\20240602224937_1.jpg"
-    },
-    {
-      "width": 2560,
-      "height": 1600,
-      "game": "cyberpunk",
-      "path": "cyberpunk\\20240602230231_1.jpg"
-    },
-    {
-      "width": 2560,
-      "height": 1600,
-      "game": "cyberpunk",
-      "path": "cyberpunk\\20240602230835_1.jpg"
-    },
-    {
-      "width": 2560,
-      "height": 1600,
-      "game": "cyberpunk",
-      "path": "cyberpunk\\20240602232917_1.jpg"
-    },
-    {
-      "width": 2560,
-      "height": 1600,
-      "game": "cyberpunk",
-      "path": "cyberpunk\\20240602233252_1.jpg"
-    },
-    {
-      "width": 2560,
-      "height": 1600,
-      "game": "cyberpunk",
-      "path": "cyberpunk\\20240603145616_1.jpg"
-    },
-    {
-      "width": 2560,
-      "height": 1600,
-      "game": "cyberpunk",
-      "path": "cyberpunk\\20240603160505_1.jpg"
-    },
-    {
-      "width": 2560,
-      "height": 1600,
-      "game": "cyberpunk",
-      "path": "cyberpunk\\20240603161222_1.jpg"
-    },
-    {
-      "width": 2560,
-      "height": 1600,
-      "game": "cyberpunk",
-      "path": "cyberpunk\\20240611131647_1.jpg"
-    }
-  ],
   "forza": [
+    {
+      "width": 2560,
+      "height": 1600,
+      "game": "forza",
+      "path": "forza\\20240618212350_1.jpg"
+    },
+    {
+      "width": 2560,
+      "height": 1600,
+      "game": "forza",
+      "path": "forza\\20240622230310_1.jpg"
+    },
     {
       "width": 2560,
       "height": 1600,
@@ -73,19 +28,7 @@
       "width": 2560,
       "height": 1600,
       "game": "forza",
-      "path": "forza\\20240618212350_1.jpg"
-    },
-    {
-      "width": 2560,
-      "height": 1600,
-      "game": "forza",
       "path": "forza\\20240618213042_1.jpg"
-    },
-    {
-      "width": 2560,
-      "height": 1600,
-      "game": "forza",
-      "path": "forza\\20240618214440_1.jpg"
     },
     {
       "width": 2560,
@@ -97,27 +40,69 @@
       "width": 2560,
       "height": 1600,
       "game": "forza",
-      "path": "forza\\20240622230310_1.jpg"
+      "path": "forza\\20240622231746_1.jpg"
     },
     {
       "width": 2560,
       "height": 1600,
       "game": "forza",
-      "path": "forza\\20240622231746_1.jpg"
+      "path": "forza\\20240618214440_1.jpg"
     }
   ],
-  "rdr": [
+  "cyberpunk": [
     {
       "width": 2560,
       "height": 1600,
-      "game": "rdr",
-      "path": "rdr\\20241030152422_1.jpg"
+      "game": "cyberpunk",
+      "path": "cyberpunk\\20240611131647_1.jpg"
     },
     {
       "width": 2560,
       "height": 1600,
-      "game": "rdr",
-      "path": "rdr\\20241030170347_1.jpg"
+      "game": "cyberpunk",
+      "path": "cyberpunk\\20240603160505_1.jpg"
+    },
+    {
+      "width": 2560,
+      "height": 1600,
+      "game": "cyberpunk",
+      "path": "cyberpunk\\20240602232917_1.jpg"
+    },
+    {
+      "width": 2560,
+      "height": 1600,
+      "game": "cyberpunk",
+      "path": "cyberpunk\\20240603145616_1.jpg"
+    },
+    {
+      "width": 2560,
+      "height": 1600,
+      "game": "cyberpunk",
+      "path": "cyberpunk\\20240602230231_1.jpg"
+    },
+    {
+      "width": 2560,
+      "height": 1600,
+      "game": "cyberpunk",
+      "path": "cyberpunk\\20240602233252_1.jpg"
+    },
+    {
+      "width": 2560,
+      "height": 1600,
+      "game": "cyberpunk",
+      "path": "cyberpunk\\20240602224937_1.jpg"
+    },
+    {
+      "width": 2560,
+      "height": 1600,
+      "game": "cyberpunk",
+      "path": "cyberpunk\\20240603161222_1.jpg"
+    },
+    {
+      "width": 2560,
+      "height": 1600,
+      "game": "cyberpunk",
+      "path": "cyberpunk\\20240602230835_1.jpg"
     }
   ],
   "rdr2": [
@@ -125,19 +110,25 @@
       "width": 2560,
       "height": 1600,
       "game": "rdr2",
-      "path": "rdr2\\20241028171508_1.jpg"
+      "path": "rdr2\\20241028173445_1.jpg"
     },
     {
       "width": 2560,
       "height": 1440,
       "game": "rdr2",
-      "path": "rdr2\\20241028172935_1.jpg"
+      "path": "rdr2\\20241028182657_1.jpg"
     },
     {
       "width": 2560,
       "height": 1600,
       "game": "rdr2",
-      "path": "rdr2\\20241028173445_1.jpg"
+      "path": "rdr2\\20241028173816_1.jpg"
+    },
+    {
+      "width": 2560,
+      "height": 1600,
+      "game": "rdr2",
+      "path": "rdr2\\20241028171508_1.jpg"
     },
     {
       "width": 2560,
@@ -147,9 +138,9 @@
     },
     {
       "width": 2560,
-      "height": 1600,
+      "height": 1440,
       "game": "rdr2",
-      "path": "rdr2\\20241028173816_1.jpg"
+      "path": "rdr2\\20241028175048_1.jpg"
     },
     {
       "width": 2560,
@@ -161,19 +152,13 @@
       "width": 2560,
       "height": 1440,
       "game": "rdr2",
-      "path": "rdr2\\20241028174853_1.jpg"
+      "path": "rdr2\\20241028195023_1.jpg"
     },
     {
       "width": 2560,
       "height": 1440,
       "game": "rdr2",
       "path": "rdr2\\20241028175025_1.jpg"
-    },
-    {
-      "width": 2560,
-      "height": 1440,
-      "game": "rdr2",
-      "path": "rdr2\\20241028175048_1.jpg"
     },
     {
       "width": 2560,
@@ -185,25 +170,39 @@
       "width": 2560,
       "height": 1440,
       "game": "rdr2",
+      "path": "rdr2\\20241028172935_1.jpg"
+    },
+    {
+      "width": 2560,
+      "height": 1440,
+      "game": "rdr2",
       "path": "rdr2\\20241028182049_1.jpg"
     },
     {
       "width": 2560,
       "height": 1440,
       "game": "rdr2",
-      "path": "rdr2\\20241028182657_1.jpg"
-    },
-    {
-      "width": 2560,
-      "height": 1440,
-      "game": "rdr2",
-      "path": "rdr2\\20241028195023_1.jpg"
+      "path": "rdr2\\20241028174853_1.jpg"
     },
     {
       "width": 2560,
       "height": 1440,
       "game": "rdr2",
       "path": "rdr2\\20241028195754_1.jpg"
+    }
+  ],
+  "rdr": [
+    {
+      "width": 2560,
+      "height": 1600,
+      "game": "rdr",
+      "path": "rdr\\20241030170347_1.jpg"
+    },
+    {
+      "width": 2560,
+      "height": 1600,
+      "game": "rdr",
+      "path": "rdr\\20241030152422_1.jpg"
     }
   ]
 }
